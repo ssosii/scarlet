@@ -1,0 +1,43 @@
+#hero {
+    background-image: url("../../assets/img/homepage/bgc.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero__container {
+        width: fit-content;
+        > .slogan {
+            width: 100%;
+            font-size: 2rem;
+            color: white;
+            font-weight: 600;
+
+            @include sm-up() {
+                width: 80%;
+                font-size: 3rem;
+            }
+            @include md-up() {
+                width: 50%;
+                font-size: 4rem;
+            }
+
+            > p {
+                margin: 0;
+            }
+        }
+
+        > .services {
+            color: white;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+        }
+
+        > .buttons {
+            display: flex;
+        }
+    }
+}

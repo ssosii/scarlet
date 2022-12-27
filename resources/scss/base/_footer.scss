@@ -1,0 +1,109 @@
+#footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../../assets/img/homepage/bgc.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .shape {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .footer__container {
+        margin-top: 50px;
+        padding: 5vh 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        > .element {
+            flex-basis: 90%;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            text-align: center;
+            color: white;
+            margin-top: 1rem;
+
+            @include sm-up() {
+                flex-basis: 45%;
+            }
+
+            @include md-up() {
+                flex-basis: 30%;
+            }
+
+            &:nth-child(1) {
+                text-align: center;
+
+                @include md-up() {
+                    text-align: left;
+                }
+            }
+
+            > .social {
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+
+            > span {
+                color: white;
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 0.5rem;
+                border: 1px solid white;
+            }
+
+            > .desc {
+                margin: 2rem 0;
+            }
+
+            > .mail {
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                margin-top: 20px;
+
+                img {
+                    vertical-align: middle;
+                    width: 20px;
+                    margin-right: 10px;
+                }
+            }
+
+            ul {
+                list-style: none;
+                color: white;
+                padding: 0;
+                text-align: center;
+                margin-top: 20px;
+                li {
+                    padding: 0.35rem 0;
+                    font-size: 0.8rem;
+                }
+            }
+
+            &.--marginTop {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    border-top: 1px solid lightcoral;
+    color: $primary;
+
+    p {
+        margin-right: 10px;
+    }
+}
