@@ -1,0 +1,47 @@
+#clients {
+    background-color: rgb(236, 236, 236);
+    padding: 5vh 0;
+    .clients__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        > .title {
+            @include main-heading();
+        }
+
+        > .desc {
+            width: 50%;
+        }
+
+        .single {
+            width: 35vh;
+            height: 35vh;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+            background-color: white;
+            @include boxShadow();
+
+            &:hover {
+                transition: 0.4s;
+                border-radius: 5px;
+                transform: translateY(-5px);
+                background-color: $primary;
+                @include boxShadow();
+            }
+
+            > .image {
+                transition: 0.4s;
+                width: 70%;
+            }
+
+            &:hover > .image {
+                filter: brightness(0) invert(1);
+                transition: 0.4s;
+            }
+        }
+    }
+}
