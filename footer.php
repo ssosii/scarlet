@@ -27,6 +27,7 @@
             <span>Info</span>
             <ul>
                 <li>FAQ</li>
+                <li>Centrum Wiedzy</li>
                 <li>RODO</li>
             </ul>
         </div>

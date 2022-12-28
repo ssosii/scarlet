@@ -17,4 +17,5 @@
             <!-- PODLINKOWAĆ -->
         </div>
     </div>
+    <img class="shape" src="<?php bloginfo('template_url'); ?>/assets/img/bottom.png" />
 </section>

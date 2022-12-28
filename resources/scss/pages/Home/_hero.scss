@@ -3,6 +3,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -39,5 +40,11 @@
         > .buttons {
             display: flex;
         }
+    }
+
+    .shape {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 }
