@@ -835,7 +835,7 @@ body.page_ #g6219 {
 }
 
 #portfolio {
-  padding: 5vh 0;
+  padding: 120px 0;
 }
 #portfolio .portfolio__container {
   display: -webkit-box;
@@ -986,7 +986,28 @@ body.page_ #g6219 {
 
 #clients {
   background-color: rgb(236, 236, 236);
-  padding: 5vh 0;
+  padding: 120px 0;
+  position: relative;
+}
+#clients > .shape-up {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 41%, 100% 0);
+          clip-path: polygon(0 0, 100% 41%, 100% 0);
+  background-color: white;
+}
+#clients > .shape-down {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  -webkit-clip-path: polygon(0 31%, 0% 100%, 100% 100%);
+          clip-path: polygon(0 31%, 0% 100%, 100% 100%);
+  background-color: white;
 }
 #clients .clients__container {
   display: -webkit-box;
@@ -1025,8 +1046,8 @@ body.page_ #g6219 {
   width: 50%;
 }
 #clients .clients__container .single {
-  width: 35vh;
-  height: 35vh;
+  width: 350px;
+  height: 350px;
   margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;

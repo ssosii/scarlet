@@ -1,4 +1,6 @@
 <section id="clients">
+    <div class="shape-up"></div>
+    <div class="shape-down"></div>
 
     <div class="clients__container">
         <h1 class="title">Nasi <em>Partnerzy</em></h1>
@@ -46,5 +48,7 @@
 
 
     </div>
+
+
 
 </section>

@@ -1,6 +1,28 @@
 #clients {
     background-color: rgb(236, 236, 236);
-    padding: 5vh 0;
+    padding: 120px 0;
+    position: relative;
+
+    > .shape-up {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 41%, 100% 0);
+        background-color: white;
+    }
+
+    > .shape-down {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        clip-path: polygon(0 31%, 0% 100%, 100% 100%);
+        background-color: white;
+    }
+
     .clients__container {
         display: flex;
         justify-content: center;
@@ -15,8 +37,8 @@
         }
 
         .single {
-            width: 35vh;
-            height: 35vh;
+            width: 350px;
+            height: 350px;
             margin: 10px;
             display: flex;
             align-items: center;
