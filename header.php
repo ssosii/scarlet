@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
-    
-     <!-- Google -->
-     <meta name="description" content="<?php bloginfo('description'); ?>" />
+
+    <!-- Google -->
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
 
     <!-- Facebook -->
-    <meta property="og:title" content="<?php the_title();?>">
-    <meta property="og:site_name" content="<?php the_title();?>">
+    <meta property="og:title" content="<?php the_title(); ?>">
+    <meta property="og:site_name" content="<?php the_title(); ?>">
     <meta property="og:url" content="<?php echo get_home_url(); ?>">
     <meta property="og:description" content="<?php bloginfo('description'); ?>">
     <meta property="og:type" content="website">
@@ -16,7 +17,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="<?php echo get_home_url(); ?>">
-    <meta property="twitter:title" content="<?php the_title();?>">
+    <meta property="twitter:title" content="<?php the_title(); ?>">
     <meta property="twitter:description" content="<?php bloginfo('description'); ?>">
     <meta property="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg">
 
@@ -28,26 +29,65 @@
 
     <!-- Favicon -->
 
-    <link rel="shortcut icon" href="/wp-content/themes/YOURTHEME/FAVICONIMAGE.png" >
-    
+    <link rel="shortcut icon" href="/wp-content/themes/YOURTHEME/FAVICONIMAGE.png">
+
     <!-- styles and scripts in functions.php -->
-  
+
 
     <?php wp_head(); ?>
 </head>
-<body class="<?php if (is_front_page()) : ?>home<?php else:?>page_<?= get_the_ID();?><?php endif; ?>">
 
-<header id="header">
+<body class="<?php if (is_front_page()) : ?>home<?php elseif (is_single()) : ?>single<?php else : ?>page_<?= get_the_ID(); ?><?php endif; ?>">
+
+
+    <header id="header" class="visible">
+        <div class="transition transition-1 is-active"></div>
+        <div class="header__inner">
+            <div class="header__container">
+                <div class="header__left">
+                    <a href="<?= get_home_URL(); ?>" class="header__logo">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/general/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main',
+                        'container' => 'ul',
+                        'menu_class' => 'header__list'
+                    ));
+                    ?>
+                </nav>
+                <div class="header__right">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'main',
+                        'container' => 'ul',
+                        'menu_class' => 'header__list'
+                    ));
+                    ?>
+                    <?php get_template_part('components/content', 'lang') ?>
+
+                </div>
+
+                <div class="burger">
+                    <div class="burger__item"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- <header id="header">
     <div class="transition transition-1 is-active"></div>
     <div class="header__inner">
         <div class="header__container">
             <nav class="header__nav">
                 <?php
-                    wp_nav_menu(array(
+                wp_nav_menu(array(
                     'theme_location' => 'main',
                     'container' => 'ul',
                     'menu_class' => 'header__list'
-                    ));
+                ));
                 ?>
             </nav>
             <div class="burger">
@@ -55,4 +95,4 @@
             </div>
         </div>
     </div>
-</header>
+</header> -->

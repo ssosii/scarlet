@@ -96,7 +96,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: "localhost",
       port: 3000,
-      proxy: "http://localhost/sp",
+      proxy: "http://localhost/pine",
       files: ["*.php"],
       injectChanges: true,
       notify: true,

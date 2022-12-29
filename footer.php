@@ -3,7 +3,7 @@
     <div class="container footer__container">
 
         <div class="element">
-            <img src="<?php bloginfo('template_url'); ?>/assets/img/logo.svg" />
+            <img src="<?php bloginfo('template_url'); ?>/assets/img/general/logo.svg" />
             <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis facilis voluptatem ad
                 repellendus
                 praesentium molestias, vero, officiis quo fuga ipsam temporibus. </p>
